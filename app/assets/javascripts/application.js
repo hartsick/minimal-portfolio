@@ -12,9 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require jquery.ui.all
 //= require_tree .
 
+$(document).foundation();
+
+// Config
 var fastFade = 100;
 var regFade = 300;
 var primaryColor = 'white';
@@ -52,3 +56,4 @@ $(document).ready(function(){
     $(div).animate({'color': highlightColor}, regFade);
   }
 });
+$(function(){ $(document).foundation(); });

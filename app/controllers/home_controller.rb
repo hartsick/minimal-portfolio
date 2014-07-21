@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :find_project, except: [:index]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order('number DESC')
   end
 
   def show

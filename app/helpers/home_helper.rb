@@ -1,7 +1,7 @@
 module HomeHelper
 
   def all_categories
-    Category.all
+    Category.all.order('name')
   end
 
 end

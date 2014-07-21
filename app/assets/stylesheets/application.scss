@@ -15,21 +15,10 @@
  *= require jquery.ui.all
  */
 
-body {
-  font-family: 'Courier New', monospace;
-  background-color: #181308;
-  color: white;
-}
-
-h1, h2, h3 {
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 36px;
-}
+@import "foundation_and_overrides";
 
 ul {
+  margin-left: 0;
   padding-left: 0;
   list-style: none;
 }
