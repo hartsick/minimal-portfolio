@@ -12,16 +12,42 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.ui.all
  */
 
- body {
+body {
   font-family: 'Courier New', monospace;
   background-color: #181308;
   color: white;
- }
+}
 
-#category-filter {
-  ul li {
-    display: inline-block;
-  }
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#category-filter ul li{
+  display: inline-block;
+  padding: 0 5px;
+}
+
+#all-projects {
+  color: yellow;
+}
+
+.project-number {
+}
+
+.project-title {
+}
+
+.project-timeframe {
 }

@@ -12,4 +12,43 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require_tree .
+
+var fastFade = 100;
+var regFade = 300;
+var primaryColor = 'white';
+var secondaryColor = 'gray';
+var highlightColor = 'yellow';
+
+$(document).ready(function(){
+
+  // Filter projects by category
+  $('.category').click(function(){
+
+    highlightCategory(this);
+
+    // Highlight appropriate projects
+    categoryName = $(this).html().toLowerCase();
+    filtered = '.category-' + categoryName;
+
+    $(filtered).animate({'color': primaryColor}, regFade);
+    $('.project').not(filtered).animate({'color': secondaryColor}, regFade);
+  });
+
+  // Remove category filter
+  $('#all-projects').click(function(){
+    highlightCategory(this);
+    $('.project').animate({'color': primaryColor});
+  });
+
+  // TODO: Project details display
+  $('.project').click(function(){
+  });
+
+  function highlightCategory(div){
+    // Highlight selected category
+    $('.category, #all-projects').css({'color': primaryColor});
+    $(div).animate({'color': highlightColor}, regFade);
+  }
+});

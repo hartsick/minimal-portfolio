@@ -1,9 +1,16 @@
 <ul id="project-list">
 <% @projects.each do |project| %>
-  <li class="<% all_categories.each do |cat| %><%= "category-" + cat.name.downcase + " " %><% end %>">
-    <%= project.number %>
-    <%= project.title %>
-    <%= project.startdate %> - <%= project.enddate %>
+  <li class="project
+    <% project.categories.each do |cat| %>
+      <%= "category-" + cat.name.downcase + " " %>
+    <% end %>
+    <% if project.project_detail %>
+      project-<%= project.project_detail.id %>
+    <% end %>
+  ">
+    <span class="project-number"><%= project.number %></span>
+    <span class="project-title"><%= project.title %></span>
+    <span class="project-timeframe"><%= project.startdate %> - <%= project.enddate %></span>
   </li>
 <% end %>
 </ul>
