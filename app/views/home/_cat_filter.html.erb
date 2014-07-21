@@ -1,0 +1,7 @@
+<nav id="category-filter">
+  <ul>
+    <% all_categories.each do |category| %>
+      <li id="category-<%= category.name.downcase %>"><%= category.name %></li>
+    <% end %>
+  </ul>
+</nav>

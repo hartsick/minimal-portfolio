@@ -1,0 +1,9 @@
+<ul id="project-list">
+<% @projects.each do |project| %>
+  <li class="<% all_categories.each do |cat| %><%= "category-" + cat.name.downcase + " " %><% end %>">
+    <%= project.number %>
+    <%= project.title %>
+    <%= project.startdate %> - <%= project.enddate %>
+  </li>
+<% end %>
+</ul>
