@@ -1,8 +1,8 @@
 <nav id="category-filter">
   <ul>
-    <li id="all-projects">All</li>
+    <li id="category-all" class="category clickable category-selected">All</li>
     <% all_categories.each do |category| %>
-    <li id="category-<%= category.name.downcase %>" class="category"><%= category.name %></li>
+    <li id="category-<%= category.name.downcase %>" class="category clickable"><%= category.name %></li>
     <% end %>
   </ul>
 </nav>

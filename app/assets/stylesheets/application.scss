@@ -17,10 +17,37 @@
 
 @import "foundation_and_overrides";
 
+$highlightColor: yellow;
+$hoverColor: #e2e1a8;
+
+h1 {
+  color: white;
+}
+
 ul {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
+}
+
+.filtered-project {
+  color: gray;
+}
+
+.clickable {
+  border-bottom: 1px solid #fff;
+}
+
+.clickable:hover{
+  color: $hoverColor;
+}
+
+.clickable:active {
+  color: $highlightColor;
+}
+
+.category-selected, .category-selected:hover {
+  color: $highlightColor;
 }
 
 #category-filter ul li{
@@ -29,7 +56,7 @@ ul {
 }
 
 #all-projects {
-  color: yellow;
+  color: $highlightColor;
 }
 
 .project-number {

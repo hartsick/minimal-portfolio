@@ -57,7 +57,7 @@ $body-font-family: "Courier New", monospace;
 
 // We use these as default colors throughout
 $primary-color: #fff;
-$secondary-color: #feffeb;
+$secondary-color: #e2e1a8;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -109,7 +109,7 @@ $secondary-color: #feffeb;
 //We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
 // $cursor-crosshair-value: crosshair;
 // $cursor-default-value: default;
-// $cursor-pointer-value: pointer;
+$cursor-pointer-value: default;
 // $cursor-help-value: help;
 // $cursor-text-value: text;
 
@@ -168,7 +168,7 @@ $h2-font-size: rem-calc(26);
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color-hover: $secondary-color;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
