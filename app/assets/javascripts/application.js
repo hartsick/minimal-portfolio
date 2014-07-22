@@ -48,8 +48,8 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var headerHeight = $('#project-header').height();
     var headerOffset = $('#project-header').offset().top;
-    var fadeHeight = headerOffset - headerHeight;
-    var lessFadeHeight = fadeHeight + 20;
+    var fadeHeight = headerOffset - headerHeight - 10;
+    var lessFadeHeight = fadeHeight + 15;
     var moreFadeHeight = fadeHeight - 15;
 
     var listItems = $('#project-list li');
