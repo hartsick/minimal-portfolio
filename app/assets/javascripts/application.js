@@ -36,9 +36,47 @@ $(document).ready(function(){
     // Highlight appropriate projects
     categoryName = $(this).html().toLowerCase();
     filtered = '.category-' + categoryName;
+    if (categoryName == 'all'){
+      filtered = '.project'
+    }
 
     $(filtered).removeClass('filtered-project', regFade);
     $('.project').not(filtered).addClass('filtered-project', regFade);
+  });
+
+  // Fade out project-list under header
+  $(window).scroll(function(){
+    var headerHeight = $('#project-header').height();
+    var headerOffset = $('#project-header').offset().top;
+    var fadeHeight = headerOffset - headerHeight;
+    var lessFadeHeight = fadeHeight + 20;
+    var moreFadeHeight = fadeHeight - 15;
+
+    var listItems = $('#project-list li');
+
+    jQuery.each(listItems, function(){
+
+      var position = $(this).position().top;
+
+      if (position < lessFadeHeight){
+        $(this).addClass('less-faded');
+      }
+      else if ($(this).hasClass('less-faded') && position > lessFadeHeight){
+        $(this).removeClass('less-faded');
+      }
+      if (position < fadeHeight){
+        $(this).addClass('faded');
+      }
+      else if ($(this).hasClass('faded') && position > fadeHeight ) {
+        $(this).removeClass('faded');
+      }
+      if (position < fadeHeight && position < moreFadeHeight){
+        $(this).addClass('most-faded');
+      }
+      else if ($(this).hasClass('most-faded') && position > moreFadeHeight ) {
+        $(this).removeClass('most-faded');
+      }
+    });
   });
 
   // TODO: Project details display

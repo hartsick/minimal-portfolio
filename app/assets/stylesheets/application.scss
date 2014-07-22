@@ -86,5 +86,15 @@ section#contact {
 #project-header {
   top: 0;
   padding-top: 10px;
-  background-color: rgba(32, 32, 32, .8);
+  // background-color: rgba(32, 32, 32, .8);
+}
+.less-faded {
+  color: rgba(255, 255, 255, .5);
+}
+
+.faded {
+  color: rgba(255, 255, 255, .2);
+}
+.most-faded {
+  color: rgba(255, 255, 255, .1)
 }
