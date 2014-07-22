@@ -1,5 +1,5 @@
 <div class="row">
-  <section id="about" class="column xsmall-12 large-12">
+  <section id="about" class="column xsmall-12 large-12 sticky">
     <h1>Christa Hartsock</h1>
 
     <p>Full-stack web developer with a background in architecture.<br />
@@ -9,12 +9,14 @@
 
 <div class="row">
   <section id="projects" class="column xsmall-12 large-9">
-    <h2>Projects</h2>
-    <%= render :partial => 'cat_filter' %>
+    <div id="project-header" class="sticky">
+      <h2>Projects</h2>
+      <%= render :partial => 'cat_filter' %>
+    </div>
     <%= render :partial => 'project_list' %>
   </section>
 
-  <section id="contact" class="column xsmall-12 large-3">
+  <section id="contact" class="column xsmall-12 large-3 sticky">
     <h2>Contact</h2>
     <ul>
       <li class="clickable"><a href="mailto:hi-at-chartsock-dot-com">Email</a></li>

@@ -67,3 +67,24 @@ ul {
 
 .project-timeframe {
 }
+
+.sticky {
+  position: sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+
+  top: 0;
+  padding-top: 10px;
+}
+
+section#contact {
+  top: 60px;
+  padding-top: 1em;
+}
+
+#project-header {
+  top: 0;
+  padding-top: 10px;
+  background-color: rgba(32, 32, 32, .8);
+}
