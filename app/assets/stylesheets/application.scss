@@ -24,10 +24,14 @@ h1 {
   color: white;
 }
 
-ul {
+ul, dl {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
+}
+
+dl dt {
+  font-weight: normal;
 }
 
 .filtered-project {
@@ -59,15 +63,6 @@ ul {
   color: $highlightColor;
 }
 
-.project-number {
-}
-
-.project-title {
-}
-
-.project-timeframe {
-}
-
 .sticky {
   position: sticky;
   position: -moz-sticky;
@@ -97,4 +92,8 @@ section#contact {
 }
 .most-faded {
   color: rgba(255, 255, 255, .1)
+}
+
+.hidden {
+  display: none;
 }

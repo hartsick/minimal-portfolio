@@ -1,15 +1,18 @@
-<ul id="project-list">
+<dl id="project-list">
 <% @projects.each do |project| %>
-  <li class="project
-    <% project.categories.each do |cat| %>
-      <%= "category-" + cat.name.downcase + " " %>
-    <% end %>
+  <dt class="project project-<%= project.id %> <% if project.project_detail %>clickable<% end %>">
+    <span class="number"><%= project.number %></span>
+    <span class="title"><%= project.title %></span>
+  </dt>
     <% if project.project_detail %>
-      clickable" id="project-<%= project.project_detail.id %>
+  <dd class="details project-<%= project.id %>">
+    <% if project.project_detail.description %>
+      <p class="description"><%= project.project_detail.description %></p>
     <% end %>
-  ">
-    <span class="project-number"><%= project.number %></span>
-    <span class="project-title"><%= project.title %></span>
-  </li>
+    <% if project.project_detail.link && project.project_detail.link_name %>
+      <p class="link"><a href="<%=project_detail.link %>"><%= project.project_detail.link_name %></a></p>
+    <% end %>
+  </dd>
+  <% end %>
 <% end %>
-</ul>
+</dl>

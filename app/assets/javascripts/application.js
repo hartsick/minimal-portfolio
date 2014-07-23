@@ -49,10 +49,10 @@ $(document).ready(function(){
     var headerHeight = $('#project-header').height();
     var headerOffset = $('#project-header').offset().top;
     var fadeHeight = headerOffset - headerHeight - 10;
-    var lessFadeHeight = fadeHeight + 15;
+    var lessFadeHeight = fadeHeight + 20;
     var moreFadeHeight = fadeHeight - 15;
 
-    var listItems = $('#project-list li');
+    var listItems = $('#project-list dt');
 
     jQuery.each(listItems, function(){
 
@@ -79,8 +79,28 @@ $(document).ready(function(){
     });
   });
 
-  // TODO: Project details display
-  $('.project').click(function(){
+  // Start Accordion
+  // Collapse all
+  $('dd.details').hide();
+
+  // Respond to click
+  $('dt.project.clickable').click(function() {
+    var detail = $(this).next();
+
+    // If clicked item is open, close it
+    if (detail.hasClass('accordion-active')){
+      detail.slideUp();
+    }
+    // Otherwise, close active item and open the clicked one
+    else {
+      $('.accordion-active').slideUp();
+      $('.accordion-active').toggleClass('accordion-active');
+
+      detail.slideDown();
+    }
+    detail.toggleClass('accordion-active');
+
+    return false;
   });
 
 });
