@@ -18,7 +18,7 @@
 @import "foundation_and_overrides";
 
 $highlightColor: yellow;
-$hoverColor: #e2e1a8;
+$hoverColor: lighten($highlightColor, 30);
 
 h1 {
   color: white;
@@ -42,7 +42,24 @@ dl dt {
   border-bottom: 1px solid #fff;
 }
 
-.clickable:hover{
+.project.clickable {
+  border: none;
+}
+
+.project.underline, .details.underline {
+    border-bottom: 1px solid #ccc;
+}
+
+.project-active {
+  color: $highlightColor;
+}
+
+.details {
+  margin-left: 15px;
+  color: #eee;
+}
+
+a:hover, .clickable:hover{
   color: $hoverColor;
 }
 
@@ -92,8 +109,4 @@ section#contact {
 }
 .most-faded {
   color: rgba(255, 255, 255, .1)
-}
-
-.hidden {
-  display: none;
 }
