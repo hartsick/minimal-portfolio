@@ -6,7 +6,7 @@
   </dt>
   <% if project.project_detail %>
   <dd class="details project-<%= project.id %>">
-    <p class="description"><%= project.project_detail.description %></p>
+    <p class="description"><%= project.project_detail.description if project && project.project_detail %></p>
     <% if project.project_detail.link && project.project_detail.link_name %>
       <p class="link"><a href="<%=project_detail.link %>"><%= project.project_detail.link_name %></a></p>
     <% end %>
