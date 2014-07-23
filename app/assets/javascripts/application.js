@@ -95,6 +95,9 @@ $(document).ready(function(){
         project.toggleClass('underline');
         project.toggleClass('project-active');
       });
+
+      // Remove fade
+      $('.unselected-project').removeClass('unselected-project', regFade);
     }
     // Otherwise, close active item and open the clicked one
     else {
@@ -107,6 +110,9 @@ $(document).ready(function(){
       project.toggleClass('underline');
       detail.toggleClass('underline');
       project.toggleClass('project-active');
+
+      // Fade unselected items
+      $('.project').not('.project-active').addClass('unselected-project', regFade);
     }
     detail.toggleClass('detail-active');
   });

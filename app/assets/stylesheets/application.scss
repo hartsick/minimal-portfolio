@@ -47,8 +47,14 @@ dl dt {
 }
 
 .project.underline, .details.underline {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);;
 }
+
+.project.underline.unselected-project, .details.underline.unselected-project {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);;
+}
+
+
 
 .project-active {
   color: $highlightColor;
@@ -57,6 +63,14 @@ dl dt {
 .details {
   margin-left: 15px;
   color: #eee;
+
+  p {
+    margin-bottom: .5rem;
+  }
+
+  a {
+    color: lighten($hoverColor, 10);
+  }
 }
 
 a:hover, .clickable:hover{
@@ -108,5 +122,9 @@ section#contact {
   color: rgba(255, 255, 255, .2);
 }
 .most-faded {
-  color: rgba(255, 255, 255, .1)
+  color: rgba(255, 255, 255, .1);
+}
+
+.unselected-project {
+  color: rgba(255, 255, 255, .1);
 }

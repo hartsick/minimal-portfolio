@@ -8,10 +8,10 @@
   <dd class="details project-<%= project.id %>">
     <p class="description"><%= project.project_detail.description %></p>
     <% if project.project_detail.link && project.project_detail.link_name %>
-      <p class="link"><a href="<%= project.project_detail.link %>"><%= project.project_detail.link_name %></a></p>
+      <%= link_to project.project_detail.link_name, project.project_detail.link %>
     <% end %>
     <% if project.project_detail.link2 && project.project_detail.link2_name %>
-      <p class="link"><a href="<%= project.project_detail.link2 %>"><%= project.project_detail.link2_name %></a></p>
+       | <%= link_to project.project_detail.link2_name, project.project_detail.link2 %>
     <% end %>
   </dd>
   <% end %>
