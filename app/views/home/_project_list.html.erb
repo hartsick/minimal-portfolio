@@ -4,11 +4,9 @@
     <span class="number"><%= project.number %></span>
     <span class="title"><%= project.title %></span>
   </dt>
-    <% if project.project_detail %>
+  <% if project.project_detail %>
   <dd class="details project-<%= project.id %>">
-    <% if project.project_detail.description %>
-      <p class="description"><%= project.project_detail.description %></p>
-    <% end %>
+    <p class="description"><%= project.project_detail.description %></p>
     <% if project.project_detail.link && project.project_detail.link_name %>
       <p class="link"><a href="<%=project_detail.link %>"><%= project.project_detail.link_name %></a></p>
     <% end %>
