@@ -51,7 +51,7 @@ dl dt {
 }
 
 .project.underline.unselected-project, .details.underline.unselected-project {
-    border-bottom: 1px solid rgba(255, 255, 255, .2);;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);;
 }
 
 
@@ -73,12 +73,12 @@ dl dt {
   }
 }
 
-a:hover, .clickable:hover{
+a:hover, .clickable:hover, footer.faded a:hover{
   color: $hoverColor;
 }
 
 .clickable:active {
-  color: $highlightColor;
+  color: lighten($highlightColor, 20);
 }
 
 .category-selected, .category-selected:hover {
@@ -114,13 +114,20 @@ section#contact {
   padding-top: 10px;
   // background-color: rgba(32, 32, 32, .8);
 }
-.less-faded {
+
+footer {
+  padding-top: 2.5em;
+  text-align: right;
+}
+
+.less-faded, footer.faded a  {
   color: rgba(255, 255, 255, .5);
 }
 
-.faded {
+.faded{
   color: rgba(255, 255, 255, .2);
 }
+
 .most-faded {
   color: rgba(255, 255, 255, .1);
 }
