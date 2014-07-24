@@ -29,6 +29,8 @@ $(document).ready(function(){
 
   // Filter projects by category
   $('.category').click(function(){
+    $('.unselected-project').removeClass('unselected-project', regFade);
+
     // Highlight appropriate category
     $('.category-selected').removeClass('category-selected');
     $(this).addClass('category-selected');
@@ -89,32 +91,39 @@ $(document).ready(function(){
     var detail = $(this).next();
 
     // If clicked item is open, close it
-    if (detail.hasClass('detail-active')){
+    if (project.hasClass('project-active')){
       detail.slideUp(400, function(){
-        detail.toggleClass('underline');
-        project.toggleClass('underline');
-        project.toggleClass('project-active');
+        detail.removeClass('underline');
+        project.addClass('underline');
+        project.removeClass('project-active');
+        $('.unselected-project').removeClass('unselected-project', 400);
       });
 
-      // Remove fade
-      $('.unselected-project').removeClass('unselected-project', regFade);
+      detail.removeClass('detail-active');
     }
     // Otherwise, close active item and open the clicked one
     else {
-      // Deactive open items
-      $('.detail-active').slideUp();
-      $('.project-active').toggleClass('project-active');
+      // Deactivate open items
+      $('.detail-active').slideUp(400, function(){
+          $(this).removeClass('underline');
+          $(this).prev().addClass('underline');
+          // Fade in unselected items
+      });
+      $('.project-active').removeClass('project-active');
 
       // Activate clicked items
+      detail.removeClass('unselected-project');
+      project.removeClass('unselected-project');
       detail.slideDown();
-      project.toggleClass('underline');
-      detail.toggleClass('underline');
-      project.toggleClass('project-active');
+      project.addClass('project-active');
+      detail.addClass('detail-active');
+
+      project.removeClass('underline');
+      detail.addClass('underline');
 
       // Fade unselected items
       $('.project').not('.project-active').addClass('unselected-project', regFade);
     }
-    detail.toggleClass('detail-active');
   });
 
 });

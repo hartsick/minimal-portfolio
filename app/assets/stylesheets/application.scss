@@ -35,7 +35,11 @@ dl dt {
 }
 
 .filtered-project {
-  color: gray;
+  color: rgba(255, 255, 255, .25);
+}
+
+.clickable, .clickable a{
+  cursor: help;
 }
 
 .clickable {
@@ -47,14 +51,16 @@ dl dt {
 }
 
 .project.underline, .details.underline {
-    border-bottom: 1px solid rgba(255, 255, 255, .7);;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
 }
 
 .project.underline.unselected-project, .details.underline.unselected-project {
-    border-bottom: 1px solid rgba(255, 255, 255, .1);;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-
+.project.underline.filtered-project, .details.underline.filtered-project {
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
 
 .project-active {
   color: $highlightColor;
