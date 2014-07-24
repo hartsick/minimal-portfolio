@@ -1,7 +1,7 @@
 <dl id="project-list">
 <% @projects.each do |project| %>
   <dt class="project project-<%= project.id %><% if project.project_detail %> underline clickable<% end %><% project.categories.each do |cat| %> category-<%= cat.name.downcase %><% end%>">
-    <span class="number"><%= project.number %></span>
+    <span class="number"><%= format_project_number(project.number) %></span>
     <span class="title"><%= project.title %></span>
   </dt>
   <% if project.project_detail %>
