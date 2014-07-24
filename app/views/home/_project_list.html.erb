@@ -13,6 +13,9 @@
     <% if project.project_detail.link2 && project.project_detail.link2_name %>
        | <%= link_to project.project_detail.link2_name, project.project_detail.link2 %>
     <% end %>
+    <% if project.project_detail.link3 && project.project_detail.link3_name %>
+       | <%= link_to project.project_detail.link3_name, project.project_detail.link3 %>
+    <% end %>
   </dd>
   <% end %>
 <% end %>
