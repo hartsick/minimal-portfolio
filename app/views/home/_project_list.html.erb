@@ -7,13 +7,13 @@
   <% if project.project_detail %>
   <dd class="details project-<%= project.id %>">
     <p class="description"><%= project.project_detail.description %></p>
-    <% if project.project_detail.link && project.project_detail.link_name %>
+    <% if project.project_detail.link.present? && project.project_detail.link_name.present? %>
       <%= link_to project.project_detail.link_name, project.project_detail.link %>
     <% end %>
-    <% if project.project_detail.link2 && project.project_detail.link2_name %>
+    <% if project.project_detail.link2.present? && project.project_detail.link2_name.present? %>
        | <%= link_to project.project_detail.link2_name, project.project_detail.link2 %>
     <% end %>
-    <% if project.project_detail.link3 && project.project_detail.link3_name %>
+    <% if project.project_detail.link3.present? && project.project_detail.link3_name.present? %>
        | <%= link_to project.project_detail.link3_name, project.project_detail.link3 %>
     <% end %>
   </dd>
