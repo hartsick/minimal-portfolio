@@ -128,14 +128,26 @@ footer {
 
 .less-faded, footer.faded a  {
   color: rgba(255, 255, 255, .5);
+
+  &.underline {
+    border-bottom: 1px solid rgba(255, 255, 255,.6)
+  }
 }
 
 .faded{
   color: rgba(255, 255, 255, .2);
+
+  &.underline {
+    border-bottom: 1px solid rgba(255, 255, 255,.3)
+  }
 }
 
 .most-faded {
   color: rgba(255, 255, 255, .1);
+
+  &.underline {
+    border-bottom: 1px solid rgba(255, 255, 255,.2)
+  }
 }
 
 .unselected-project {
